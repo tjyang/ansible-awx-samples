@@ -1,6 +1,11 @@
-- name: Hello World Sample
+- name: local:/var-lib-awx-projects/miq-health-check
   hosts: all
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: perform uname command 
+      command: "uname -a"
+    - name: check lenovo.com binding
+      command: "realm list"
+

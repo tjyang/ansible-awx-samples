@@ -1,0 +1,25 @@
+---
+- name: Install Common packages for MIQ appliance.
+  hosts: all
+  tasks:
+    - name: Add epel-release repo
+      yum:
+        name: epel-release
+        state: present
+    - name: Install mlocate
+      yum:
+        name: mlocate
+        state: present
+    - name: Install emacs-nox
+      yum:
+        name: emacs-nox
+        state: present
+    - name: Install htop
+      yum:
+        name: htop
+        state: present
+
+
+
+
+

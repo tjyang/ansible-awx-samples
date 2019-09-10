@@ -1,0 +1,20 @@
+- name: MIQ Health check
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Run some commands to check MIQ appliance health"
+    - name: Check OS Version
+      command: "cat /etc/redhat-release"
+    - name: perform uname command 
+      command: "uname -a"
+    - name: check lenovo.com binding
+      command: "realm list"
+    - name: check we can display miqadm group info
+      command: "dbus-send --print-reply --system --dest=org.freedesktop.sssd.infopipe /org/freedesktop/sssd/infopipe org.freedesktop.sssd.infopipe.GetUserGroups string:miqadm"
+
+    - name: check lenovo.com binding
+      command: "realm list"
+
+
+
