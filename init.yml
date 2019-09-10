@@ -1,4 +1,6 @@
 ---
-- import_playbook: miq-health-check.yml
 - import_playbook: miq-common-pkgs.yml
+- import_playbook: miq-sssd-pkgs.yml
+- import_playbook: miq-health-check.yml
+
 
