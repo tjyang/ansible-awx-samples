@@ -1,0 +1,21 @@
+---
+- name: Install Common packages.
+  hosts: all
+  tasks:
+    - name: Add epel-release repo
+      dnf:
+        name: epel-release
+        state: present
+    - name: Install mlocate
+      dnf:
+        name: mlocate
+        state: present
+    - name: Install emacs-nox
+      dnf:
+        name: emacs-nox
+        state: present
+    - name: Install htop
+      dnf:
+        name: htop
+        state: present
+
